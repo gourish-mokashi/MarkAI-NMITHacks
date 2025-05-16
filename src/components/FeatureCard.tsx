@@ -10,7 +10,7 @@ export function FeatureCard({
   title,
   description
 }: FeatureCardProps) {
-  return <div className="bg-white p-6 rounded-lg shadow-md border border-gray-100 hover:shadow-lg transition-shadow">
+  return <div className="bg-white p-6 rounded-2xl shadow-md border border-gray-100 hover:shadow-lg transition-shadow">
       <div className="bg-blue-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
         <Icon className="h-6 w-6 text-blue-600" />
       </div>

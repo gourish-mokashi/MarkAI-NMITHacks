@@ -18,16 +18,16 @@ export function Home() {
                 to privacy and security in the world of AI.
               </p>
               <div className="flex flex-wrap gap-4">
-                <Link to="/generator" className="px-6 py-3 bg-white text-blue-700 font-medium rounded-lg shadow-md hover:bg-gray-50 transition-colors">
+                <Link to="/generator" className="px-6 py-3 bg-white text-blue-700 font-medium rounded-xl shadow-md hover:bg-gray-50 transition-colors">
                   Try Generator
                 </Link>
-                <Link to="/detector" className="px-6 py-3 bg-blue-500 text-white font-medium rounded-lg border border-blue-400 hover:bg-blue-600 transition-colors">
+                <Link to="/detector" className="px-6 py-3 bg-blue-500 text-white font-medium rounded-xl border border-blue-400 hover:bg-blue-600 transition-colors">
                   Try Detector
                 </Link>
               </div>
             </div>
             <div className="hidden md:block">
-              <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="AI Image Generation Concept" className="rounded-lg shadow-xl" />
+              <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="AI Image Generation Concept" className="rounded-3xl shadow-xl" />
             </div>
           </div>
         </div>
