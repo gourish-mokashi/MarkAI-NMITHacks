@@ -8,7 +8,7 @@ export function About() {
           </h1>
           <div className="prose max-w-none">
             <p>
-              MarkAI is a cutting-edge platform that leverages the latest
+              MarkAI is a cutting-edge tool that leverages the latest
               advancements in artificial intelligence to provide powerful image
               generation and detection tools. Our mission is to empower creators
               while promoting transparency in the age of AI-generated content.
