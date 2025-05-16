@@ -5,9 +5,9 @@ import { MenuIcon, XIcon } from 'lucide-react';
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
-    <header className="sticky top-5 z-50 shadow-sm mx-4 my-4 rounded-xl bg-[#101010]/30 backdrop-blur-lg min-w-[80%]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-20">
+    <header className="w-[90%] sticky top-5 z-50 shadow-sm px-4 my-4 rounded-xl bg-[#101010]/30 backdrop-blur-lg">
+      <div className="w-full max-w-7xl mx-auto">
+        <div className="flex justify-between p-2 h-20">
           <div className="flex items-center">
             <Link to="/" className="flex-shrink-0 flex items-center">
               <span className="text-blue-600 font-bold text-3xl">Mark</span>

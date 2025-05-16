@@ -3,16 +3,16 @@ import { TwitterIcon, FacebookIcon, InstagramIcon, GithubIcon } from 'lucide-rea
 export function Footer() {
   return <footer className="text-white w-full">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="flex justify-between">
           <div>
-            <h3 className="text-xl font-bold mb-4">MarkAI</h3>
+            <h3 className="text-xl font-bold mb-4"><span className='text-blue-600'>Mark</span>AI</h3>
             <p className="text-gray-300">
-              Advanced AI image generation and detection platform.
+              Advanced AI image generation and detection tool.
             </p>
           </div>
           <div>
             <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
-            <ul className="space-y-2">
+            <ul className="space-y-2 mr-32">
               <li>
                 <Link to="/generator" className="text-gray-300 hover:text-white">
                   Generator
@@ -34,23 +34,6 @@ export function Footer() {
                 </Link>
               </li>
             </ul>
-          </div>
-          <div>
-            <h4 className="text-lg font-semibold mb-4">Connect With Us</h4>
-            <div className="flex space-x-4">
-              <a href="#" className="text-gray-300 hover:text-white">
-                <TwitterIcon className="h-5 w-5" />
-              </a>
-              <a href="#" className="text-gray-300 hover:text-white">
-                <FacebookIcon className="h-5 w-5" />
-              </a>
-              <a href="#" className="text-gray-300 hover:text-white">
-                <InstagramIcon className="h-5 w-5" />
-              </a>
-              <a href="#" className="text-gray-300 hover:text-white">
-                <GithubIcon className="h-5 w-5" />
-              </a>
-            </div>
           </div>
         </div>
         <div className="border-t border-gray-700 mt-8 pt-8 flex flex-col md:flex-row justify-between">

@@ -1,4 +1,3 @@
-import React from 'react';
 export function About() {
   return <div className="w-full bg-gray-50 py-12 min-h-screen">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
