@@ -14,7 +14,7 @@ export function Home() {
               </h1>
               <p className="text-lg md:text-xl mb-8 opacity-90">
                 MarkAI is a powerful tool that allows any Image generation model
-                to create apply a watermark to their images, and provides a new definition
+                to apply an invisible watermark to AI generated images, and provides a new definition
                 to privacy and security in the world of AI.
               </p>
               <div className="flex flex-wrap gap-4">
@@ -41,7 +41,7 @@ export function Home() {
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Our platform offers state-of-the-art capabilities for both
-              generating watermarked images and detecting AI images
+              generating watermarked images and detecting AI generated images
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -49,31 +49,6 @@ export function Home() {
             <FeatureCard icon={ShieldIcon} title="AI Image Detector" description="Identify AI-generated images with high accuracy to verify content authenticity." />
             <FeatureCard icon={ZapIcon} title="Lightning Fast" description="Get results in seconds with our optimized processing pipeline and powerful infrastructure." />
             <FeatureCard icon={ImageIcon} title="Watermarking" description="All generated images include invisible watermarks to help with future detection and attribution." />
-          </div>
-        </div>
-      </section>
-      {/* CTA Section */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-blue-600 rounded-2xl shadow-xl overflow-hidden">
-            <div className="px-6 py-12 md:p-12 text-center md:text-left md:flex md:items-center md:justify-between">
-              <div>
-                <h2 className="text-2xl font-bold text-white mb-2">
-                  Ready to get started?
-                </h2>
-                <p className="text-blue-100">
-                  Try our AI image filter tools today.
-                </p>
-              </div>
-              <div className="mt-8 md:mt-0 flex flex-col sm:flex-row gap-4">
-                <Link to="/generator" className="px-6 py-3 bg-white text-blue-700 font-medium rounded-lg shadow-md hover:bg-gray-50 transition-colors text-center">
-                  Generate Image
-                </Link>
-                <Link to="/detector" className="px-6 py-3 bg-blue-500 text-white font-medium rounded-lg border border-blue-400 hover:bg-blue-600 transition-colors text-center">
-                  Detect AI Images
-                </Link>
-              </div>
-            </div>
           </div>
         </div>
       </section>
