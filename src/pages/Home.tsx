@@ -10,7 +10,7 @@ export function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             <div>
               <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-4">
-                Watermark and Detect AI Images with Confidence
+                Watermark and Detect AI Images
               </h1>
               <p className="text-lg md:text-xl mb-8 opacity-90">
                 MarkAI is a powerful tool that allows any Image generation model
