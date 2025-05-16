@@ -10,12 +10,12 @@ export function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             <div>
               <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-4">
-                Generate and Detect AI Images with Confidence
+                Watermark and Detect AI Images with Confidence
               </h1>
               <p className="text-lg md:text-xl mb-8 opacity-90">
-                MarkAI provides cutting-edge tools for both creating stunning
-                AI-generated images and detecting AI-generated content with high
-                accuracy.
+                MarkAI is a powerful tool that allows any Image generation model
+                to create apply a watermark to their images, and provides a new definition
+                to privacy and security in the world of AI.
               </p>
               <div className="flex flex-wrap gap-4">
                 <Link to="/generator" className="px-6 py-3 bg-white text-blue-700 font-medium rounded-lg shadow-md hover:bg-gray-50 transition-colors">
@@ -37,15 +37,15 @@ export function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Powerful AI Image Tools
+              Powerful AI Image Filter Tool
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Our platform offers state-of-the-art capabilities for both
-              generating and detecting AI images
+              generating watermarked images and detecting AI images
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <FeatureCard icon={SparklesIcon} title="AI Image Generator" description="Create stunning, realistic images from text descriptions using our advanced AI algorithms." />
+            <FeatureCard icon={SparklesIcon} title="AI Image Filter" description="Embed Accurate Watermark to AI generated images using our advanced AI filter." />
             <FeatureCard icon={ShieldIcon} title="AI Image Detector" description="Identify AI-generated images with high accuracy to verify content authenticity." />
             <FeatureCard icon={ZapIcon} title="Lightning Fast" description="Get results in seconds with our optimized processing pipeline and powerful infrastructure." />
             <FeatureCard icon={ImageIcon} title="Watermarking" description="All generated images include invisible watermarks to help with future detection and attribution." />
@@ -62,7 +62,7 @@ export function Home() {
                   Ready to get started?
                 </h2>
                 <p className="text-blue-100">
-                  Try our AI image generator or detector tools today.
+                  Try our AI image filter tools today.
                 </p>
               </div>
               <div className="mt-8 md:mt-0 flex flex-col sm:flex-row gap-4">
