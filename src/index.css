@@ -4,11 +4,16 @@
 
 /*FONTS*/
 @font-face {
-  font-family: 'PPMori-Regular';
-  src: url(@public/assets/fonts/PPMori-Regular.otf);
+  font-family: 'Geist';
+  src: url(@public/assets/fonts/Geist[wght].ttf);
 }
 
 @font-face {
-  font-family: 'PPMori-SemiBold';
-  src: url(@public/assets/fonts/PPMori-SemiBold.otf);
+  font-family: 'GeistMono';
+  src: url(@public/assets/fonts/GeistMono[wght].ttf);
+}
+
+body {
+  background-color: #101010;
+  font-family: 'Geist', sans-serif;
 }
