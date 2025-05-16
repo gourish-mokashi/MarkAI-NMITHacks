@@ -4,7 +4,7 @@ import { MenuIcon, XIcon } from 'lucide-react';
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  return <header className="bg-white shadow-sm w-full pp-morireular">
+  return <header className="bg-white shadow-sm w-full font-pp-mori-regular">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-20">
           <div className="flex items-center">
@@ -14,18 +14,22 @@ export function Header() {
           </div>
 
           {/* Desktop navigation */}
-          <nav className="hidden md:flex items-center space-x-8 gap-8">
-            <Link to="/generator" className="text-xl text-gray-700 hover:text-blue-600 py-1 text-sm font-large hover:text-zinc-900 relative group">
+          <nav className="hidden md:flex items-center space-x-8 gap-4">
+            <Link to="/" className="text-xl text-gray-700 hover:text-zinc-900 relative group">
+              Home
+              <span className="absolute bottom-0 left-0 w-full h-[1px] bg-zinc-900 transform scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100"></span>
+            </Link>
+            <Link to="/generator" className="text-xl text-gray-700 font-medium hover:text-zinc-900 relative group">
               Generator
-              <span className="absolute bottom-0 left-0 w-full h-0.5 bg-zinc-900 transform scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100"></span>
+              <span className="absolute bottom-0 left-0 w-full h-[1px] bg-zinc-900 transform scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100"></span>
             </Link>
-            <Link to="/detector" className="text-xl text-gray-700 hover:text-blue-600 py-1 text-sm font-large hover:text-zinc-900 relative group">
+            <Link to="/detector" className="text-xl text-gray-700 h font-medium hover:text-zinc-900 relative group">
               Detector
-              <span className="absolute bottom-0 left-0 w-full h-0.5 bg-zinc-900 transform scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100"></span>
+              <span className="absolute bottom-0 left-0 w-full h-[1px] bg-zinc-900 transform scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100"></span>
             </Link>
-            <Link to="/about" className="text-xl text-gray-700 hover:text-blue-600 py-1 text-sm font-500 hover:text-zinc-900 relative group">
+            <Link to="/about" className="text-xl text-gray-700 font-medium hover:text-zinc-900 relative group">
               About
-              <span className="absolute bottom-0 left-0 w-full h-0.5 bg-zinc-900 transform scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100"></span>
+              <span className="absolute bottom-0 left-0 w-full h-[1px] bg-zinc-900 transform scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100"></span>
             </Link>
           </nav>
 

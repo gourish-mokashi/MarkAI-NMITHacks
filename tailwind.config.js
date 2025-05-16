@@ -18,6 +18,10 @@ export default {content: [
           900: '#1e3a8a',
         }
       }
-    }
+    },
+    fontFamily: {
+      'pp-mori-regular': ['PPMori-Regular', 'sans-serif'],
+      'pp-mori-semibold': ['PPMori-SemiBold', 'sans-serif'],
+    },
   }
 }
