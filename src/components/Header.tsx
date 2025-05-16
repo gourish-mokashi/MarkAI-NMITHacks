@@ -17,19 +17,19 @@ export function Header() {
           <nav className="hidden md:flex items-center space-x-8 gap-4">
             <Link to="/" className="text-xl text-gray-700 hover:text-zinc-900 relative group">
               Home
-              <span className="absolute bottom-0 left-0 w-full h-[1px] bg-zinc-900 transform scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100"></span>
+              <span className="absolute bottom-0 left-0 w-full h-[1.5px] bg-zinc-900 transform scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100"></span>
             </Link>
             <Link to="/generator" className="text-xl text-gray-700 font-medium hover:text-zinc-900 relative group">
               Generator
-              <span className="absolute bottom-0 left-0 w-full h-[1px] bg-zinc-900 transform scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100"></span>
+              <span className="absolute bottom-0 left-0 w-full h-[1.5px] bg-zinc-900 transform scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100"></span>
             </Link>
             <Link to="/detector" className="text-xl text-gray-700 h font-medium hover:text-zinc-900 relative group">
               Detector
-              <span className="absolute bottom-0 left-0 w-full h-[1px] bg-zinc-900 transform scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100"></span>
+              <span className="absolute bottom-0 left-0 w-full h-[1.5px] bg-zinc-900 transform scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100"></span>
             </Link>
             <Link to="/about" className="text-xl text-gray-700 font-medium hover:text-zinc-900 relative group">
               About
-              <span className="absolute bottom-0 left-0 w-full h-[1px] bg-zinc-900 transform scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100"></span>
+              <span className="absolute bottom-0 left-0 w-full h-[1.5px] bg-zinc-900 transform scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100"></span>
             </Link>
           </nav>
 
@@ -44,6 +44,9 @@ export function Header() {
 
       {/* Mobile menu */}
       {isMenuOpen && <div className="md:hidden bg-white pt-2 pb-3 space-y-1 shadow-lg">
+        <Link to="/" className="block px-4 py-2 text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-100" onClick={() => setIsMenuOpen(false)}>
+            Home
+          </Link>
           <Link to="/generator" className="block px-4 py-2 text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-100" onClick={() => setIsMenuOpen(false)}>
             Generator
           </Link>
