@@ -5,10 +5,10 @@
 /*FONTS*/
 @font-face {
   font-family: 'PPMori-Regular';
-  src: url(../public/assets/fonts/PPMori-Regular.otf);
+  src: url(@public/assets/fonts/PPMori-Regular.otf);
 }
 
 @font-face {
   font-family: 'PPMori-SemiBold';
-  src: url(../public/assets/fonts/PPMori-SemiBold.otf);
+  src: url(@public/assets/fonts/PPMori-SemiBold.otf);
 }
