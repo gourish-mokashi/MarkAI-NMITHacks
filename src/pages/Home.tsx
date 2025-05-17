@@ -1,6 +1,27 @@
 import { Link } from 'react-router-dom';
 import { ImageIcon, ShieldIcon, SparklesIcon, ZapIcon } from 'lucide-react';
 import { FeatureCard } from '../components/FeatureCard';
+import Example from '../components/Example';
+
+const ExampleData = [
+  {
+    title: 'AI Generated Cat',
+    imageSrc: "/assets/images/CAT.jpg",
+    alt: 'AI Generated Cat',
+    headerText: 'WIHTOUT-WATERMARK',
+    link: '',
+    cardImageBgColor: '#F3F4F6'
+  },
+  {
+    title: 'AI Generated Cat with watermark',
+    imageSrc: "/assets/images/CAT.jpg",
+    alt: 'AI Generated Cat  with watermark',
+    headerText: "WITH-WATERMARK",
+    link: '#',
+    cardImageBgColor: '#F3F4F6'
+  },
+];
+
 export function Home() {
   return <div className="w-full">
       {/* Hero Section */}
@@ -31,14 +52,14 @@ export function Home() {
           </div>
         </div>
       </section>
-      {/* Features Section */}
+      {/* Features Section */}  
       <section className="py-16 md:py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-white text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col w-full">
+          <div className="mb-12">
+            <h2 className="text-white text-3xl md:text-5xl font-bold text-gray-900 mb-4 border-b-2 border-gray-500 md:pb-6 sm:pb-4 pb-3 ">
               Powerful <span className='text-blue-600'>AI Image</span> Filter Tool
             </h2>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+            <p className="w-full text-xl text-gray-400 max-w-3xl">
               Our platform offers state-of-the-art capabilities for both
               generating watermarked images and detecting AI generated images
             </p>
@@ -51,6 +72,7 @@ export function Home() {
           </div>
         </div>
       </section>
+      <Example header="Examples" projects={ExampleData}/>
       
     </div>;
 }

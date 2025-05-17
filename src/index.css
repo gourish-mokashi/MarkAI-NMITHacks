@@ -16,4 +16,5 @@
 body {
   background-color: #101010;
   font-family: 'Geist', sans-serif;
+  overflow-x: hidden;
 }
