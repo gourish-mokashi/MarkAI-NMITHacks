@@ -70,7 +70,7 @@ export function Home() {
       <section className="py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col w-full">
           <div className="mb-12">
-            <h2 className="text-white text-3xl md:text-5xl font-bold text-gray-900 mb-4 border-b-2 border-gray-500 md:pb-6 sm:pb-4 pb-3 ">
+            <h2 className="text-white text-3xl md:text-5xl font-bold mb-4 border-b-2 border-gray-500 md:pb-6 sm:pb-4 pb-3 ">
               Powerful <span className="text-blue-600">AI Image</span> Filter
               Tool
             </h2>

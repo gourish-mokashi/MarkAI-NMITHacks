@@ -9,12 +9,12 @@ export function Footer() {
   ];
 
   const bottomLinks = [
-    { name: 'Made with ❤️ by Infectors ↗', to: 'https://github.com/gourish-mokashi/MarkAI-NMITHacks.git' },
+    { name: 'Made with ❣️ by Infectors ↗', to: 'https://github.com/gourish-mokashi/MarkAI-NMITHacks.git' },
   ];
 
   return (
     <footer className="text-white w-full mt-8">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-8">
         <div className="flex flex-col md:flex-row md:gap-0 gap-10 border-t-2 border-gray-500 pt-8 flex justify-between">
           <div>
             <h3 className="text-3xl font-bold mb-4">
@@ -39,16 +39,13 @@ export function Footer() {
             </div>
           </div>
         </div>
-        <div className="flex flex-col items-center text-lg border-t-2 border-gray-500 mt-8 pt-8 w-full">
-          <p className="text-gray-300 text-base">
-            {/* &copy; {new Date().getFullYear()} MarkAI. All rights reserved. */}
-          </p>
+        <div className="flex flex-col items-center text-lg border-t-2 border-gray-500 mt-2 pt-2 w-full">
           <div className="mt-4">
             {bottomLinks.map((link) => (
               <div key={link.to}>
                 <Link
                   to={link.to}
-                  className="text-gray-300 hover:text-white text-3xl"
+                  className="text-gray-300 hover:text-white text-xl"
                 >
                   {link.name}
                 </Link>

@@ -3,10 +3,10 @@ import { FaXTwitter } from "react-icons/fa6";
 
 export function About() {
   return (
-    <div className="w-full bg-[#101010] py-12 min-h-screen">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="bg-[#101010] rounded-lg shadow-md p-8">
-          <h1 className="text-3xl font-bold text-gray-900 mb-6">
+    <div className="w-full min-h-screen p-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+        <div className="rounded-lg shadow-md">
+          <h1 className="text-white text-3xl md:text-5xl font-bold mb-4 font-bold text-gray-900 mb-6">
             <span className="text-white">About</span>{" "}
             <span className="text-blue-600">Mark</span>
             <span className="text-white">AI</span>
@@ -21,7 +21,7 @@ export function About() {
               reliably identified by our detection tool helping fight deepfakes
               and ensuring AI-generated content stays traceable and accountable.
             </p>
-            <h2 className="text-white text-xl font-semibold mt-8 mb-3">
+            <h2 className="text-white text-2xl md:text-4xl font-bold mb-4 font-semibold mt-8 mb-3">
               Tech-Stack
             </h2>
             {/* Horizontal line after Tech-Stack */}
@@ -29,9 +29,10 @@ export function About() {
             <p className="text-gray-300">
               Frontend: React+Vite, TypeScript, Tailwind CSS
               <br />
-              Backend:
+              Backend: Python, Flask, OpenCV, PyTorch, Diffusers-Stable Diffusion Pipeline, Flask-CORS
             </p>
-            <h2 className="text-xl font-semibold mt-8 mb-3">Our Technology</h2>
+            <h2 className="text-white text-2xl md:text-4xl font-bold mb-4 font-semibold mt-8 mb-">Our Technology</h2>
+            <div className="border-t-2 border-gray-500 mb-6"></div>
             <p>
               Our platform uses state-of-the-art deep learning models for both
               image generation and detection. The generator module can create
