@@ -38,7 +38,7 @@ export function Home() {
                 to privacy and security in the world of AI.
               </p>
               <div className="flex flex-wrap gap-4">
-                <Link to="/generator" className="px-6 py-3 text-xl bg-white text-blue-700 font-medium rounded-xl shadow-md hover:bg-gray-300 transition-colors">
+                <Link to="/generator" className="px-6 py-3 text-xl bg-white text-blue-600 font-medium rounded-xl shadow-md hover:bg-gray-300 transition-colors">
                   Try Generator
                 </Link>
                 <Link to="/detector" className="px-6 py-3 text-xl bg-blue-600 text-white font-medium rounded-xl shadow-md hover:bg-blue-500 transition-colors">
