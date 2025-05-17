@@ -44,7 +44,7 @@ export function Home() {
               <div className="flex flex-wrap gap-4">
                 <Link
                   to="/generator"
-                  className="px-6 py-3 text-xl bg-white text-blue-700 font-medium rounded-xl shadow-md hover:bg-gray-300 transition-colors"
+                  className="px-6 py-3 text-xl bg-white text-blue-600 font-medium rounded-xl shadow-md hover:bg-gray-300 transition-colors"
                 >
                   Try Generator
                 </Link>

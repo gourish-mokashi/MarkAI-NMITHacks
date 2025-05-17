@@ -27,7 +27,7 @@ export function GeneratorForm() {
           <label htmlFor="prompt" className="w-full block text-gray-300 font-medium mb-2">
             Describe the image you want to generate
           </label>
-          <div className="flex items-stretch w-full gap-6">
+          <div className="flex md:flex-row flex-col items-stretch w-full gap-6">
             <input
               id="prompt"
               type="text"
@@ -76,7 +76,6 @@ export function GeneratorForm() {
         </div>
       </form>
 
-      {/* Image Preview Box */}
       <div className="w-full p-4 rounded-xl shadow-md bg-gray-300 flex flex-col justify-center items-center min-h-[500px]">
         {generatedImage ? (
           <>

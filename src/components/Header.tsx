@@ -7,12 +7,17 @@ export function Header() {
   return (
     <header className="w-[90%] sticky top-5 z-50 shadow-sm px-4 my-4 rounded-xl bg-[#101010]/30 backdrop-blur-lg">
       <div className="w-full max-w-7xl mx-auto">
-        <div className="flex justify-between p-2 h-20">
+        <div className="flex justify-between p-2 md:h-20 h-14">
           <div className="flex items-center">
             <Link to="/" className="flex-shrink-0 flex items-center">
+<<<<<<< HEAD
               <Fingerprint className="h-10 w-10 text-blue-400" />
               <span className="text-blue-400 font-bold text-3xl">Mark</span>
               <span className="text-white font-bold text-3xl">AI</span>
+=======
+              <span className="text-blue-600 font-bold md:text-3xl text-2xl">Mark</span>
+              <span className="text-white font-bold md:text-3xl text-2xl">AI</span>
+>>>>>>> 105ae3cb0c8f48585ae0f59dc3f0d7afe850e7e2
             </Link>
           </div>
 
