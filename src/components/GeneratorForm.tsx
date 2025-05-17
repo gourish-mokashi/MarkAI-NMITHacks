@@ -4,24 +4,49 @@ import { ImageIcon, DownloadIcon } from 'lucide-react';
 export function GeneratorForm() {
   const [prompt, setPrompt] = useState('');
   const [isGenerating, setIsGenerating] = useState(false);
-  const [generatedImage, setGeneratedImage] = useState('');
+  const [generatedImage, setGeneratedImage] = useState<string | null>(null);
+  const [error, setError] = useState<string | null>(null);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!prompt.trim()) return;
+  
     setIsGenerating(true);
-    // Simulate image generation
-    setTimeout(() => {
-      setGeneratedImage(
-        'https://images.unsplash.com/photo-1579546929518-9e396f3cc809?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80'
-      );
+    setError(null);
+    setGeneratedImage(null);
+  
+    try {
+      const response = await fetch('http://localhost:5000/generate', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ prompt }),
+      });
+  
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.error || 'Failed to generate image');
+      }
+  
+      const blob = await response.blob();
+      const imageUrl = URL.createObjectURL(blob);
+      setGeneratedImage(imageUrl);
+    } catch (err: any) {
+      setError(err.message);
+    } finally {
       setIsGenerating(false);
-    }, 2000);
+    }
+  };
+
+  const downloadImage = () => {
+    if (!generatedImage) return;
+    const link = document.createElement('a');
+    link.href = generatedImage;
+    link.download = 'generated-image.png';
+    link.click();
   };
 
   return (
     <div className="flex flex-col items-center w-full gap-6 max-w-3xl">
-      {/* Form */}
       <form onSubmit={handleSubmit} className="w-full">
         <div className="w-full mb-4">
           <label htmlFor="prompt" className="w-full block text-gray-300 font-medium mb-2">
@@ -40,30 +65,12 @@ export function GeneratorForm() {
             <button
               type="submit"
               disabled={isGenerating}
-              className={`h-[56px] px-6 bg-blue-500 text-white rounded-xl hover:bg-blue-700 transition-colors flex items-center justify-center ${
-                isGenerating ? 'opacity-70 cursor-not-allowed' : ''
-              }`}
+              className={`h-[56px] px-6 bg-blue-500 text-white rounded-xl hover:bg-blue-700 transition-colors flex items-center justify-center ${isGenerating ? 'opacity-70 cursor-not-allowed' : ''}`}
             >
               {isGenerating ? (
-                <svg
-                  className="animate-spin h-5 w-5 text-white"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                >
-                  <circle
-                    className="opacity-25"
-                    cx="12"
-                    cy="12"
-                    r="10"
-                    stroke="currentColor"
-                    strokeWidth="4"
-                  ></circle>
-                  <path
-                    className="opacity-75"
-                    fill="currentColor"
-                    d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
-                  ></path>
+                <svg className="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                  <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                  <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                 </svg>
               ) : (
                 <>
@@ -77,6 +84,7 @@ export function GeneratorForm() {
       </form>
 
       <div className="w-full p-4 rounded-xl shadow-md bg-gray-300 flex flex-col justify-center items-center min-h-[500px]">
+        {error && <p className="text-red-600 text-sm mb-4">{error}</p>}
         {generatedImage ? (
           <>
             <h3 className="font-medium text-white text-lg mb-4">Generated Image</h3>
@@ -91,14 +99,19 @@ export function GeneratorForm() {
               </div>
             </div>
             <div className="mt-4 flex justify-end w-full">
-              <button className="flex items-center px-4 py-2 bg-green-600 text-white rounded-md hover:bg-green-700 transition-colors">
+              <button
+                onClick={downloadImage}
+                className="flex items-center px-4 py-2 bg-green-600 text-white rounded-md hover:bg-green-700 transition-colors"
+              >
                 <DownloadIcon className="mr-2 h-4 w-4" />
                 Download Image
               </button>
             </div>
           </>
         ) : (
-          <p className="text-gray-600 text-center">Generated image will appear here</p>
+          <p className="text-gray-600 text-center">
+            {isGenerating ? 'Generating image...' : 'Generated image will appear here'}
+          </p>
         )}
       </div>
     </div>

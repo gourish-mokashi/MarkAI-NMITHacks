@@ -4,6 +4,14 @@ import { FaXTwitter } from "react-icons/fa6";
 export function About() {
   const team = [
     {
+      name: "Gourish Mokashi",
+      role: "Back-End Developer",
+      img: "assets/images/gourish.jpeg",
+      github: "https://github.com/gourish-mokashi",
+      linkedin: "https://www.linkedin.com/in/gourish-mokashi",
+      x: "https://x.com/GourishMokashi",
+    },
+    {
       name: "Jayasheel Vinay J",
       role: "Front-End Developer",
       img: "/assets/images/jay.webp",
@@ -26,15 +34,7 @@ export function About() {
       github: "https://github.com/Sanjana0019",
       linkedin: "https://www.linkedin.com/in/sanjana-patil-436b7b332/",
       x: "https://x.com/sanjana_p0019",
-    },
-    {
-      name: "Gourish Mokashi",
-      role: "Back-End Developer",
-      img: "assets/images/gourish.jpeg",
-      github: "https://github.com/gourish-mokashi",
-      linkedin: "https://www.linkedin.com/in/gourish-mokashi",
-      x: "https://x.com/GourishMokashi",
-    },
+    }
   ];
 
   return (
@@ -64,7 +64,8 @@ export function About() {
             <p>
               Frontend: React+Vite, TypeScript, Tailwind CSS
               <br />
-              Backend: Python, Flask, OpenCV, PyTorch, Diffusers-Stable Diffusion Pipeline, Flask-CORS
+              Backend: Python, Flask, OpenCV, PyTorch, Diffusers-Stable
+              Diffusion Pipeline, Flask-CORS
             </p>
 
             <h2 className="text-white text-2xl md:text-4xl font-bold mt-8 mb-3">
@@ -89,7 +90,7 @@ export function About() {
             </h2>
           </div>
 
-          <div className="mb-6"/>
+          <div className="mb-6" />
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 mt-6">
             {team.map((person, i) => (
               <div
