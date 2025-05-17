@@ -9,12 +9,12 @@ export function Header() {
       <div className="w-full max-w-7xl mx-auto">
         <div className="flex justify-between p-2 md:h-20 h-14">
           <div className="flex items-center">
-            <Link to="/" className="flex-shrink-0 flex items-center">
-              <Fingerprint className="h-10 w-10 text-blue-400" />
-              <span className="text-blue-400 font-bold text-3xl">Mark</span>
-              <span className="text-white font-bold text-3xl">AI</span>
-              <span className="text-blue-600 font-bold md:text-3xl text-2xl">Mark</span>
-              <span className="text-white font-bold md:text-3xl text-2xl">AI</span>
+            <Link to="/" className="flex-shrink-0 flex gap-2 items-center">
+              <Fingerprint className="h-10 w-10 text-blue-500" />
+                <div>
+                  <span className="text-blue-500 font-bold md:text-3xl text-2xl">Mark</span>
+                  <span className="text-white font-bold md:text-3xl text-2xl">AI</span>
+              </div>
             </Link>
           </div>
 

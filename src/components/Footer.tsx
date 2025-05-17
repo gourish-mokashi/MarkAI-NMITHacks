@@ -9,7 +9,6 @@ export function Footer() {
   ];
 
   const bottomLinks = [
-    // { name: 'Privacy Policy ↗', to: '#' },
     { name: 'Made with ❤️ by Infectors ↗', to: 'https://github.com/gourish-mokashi/MarkAI-NMITHacks.git' },
   ];
 

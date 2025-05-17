@@ -40,7 +40,7 @@ export function GeneratorForm() {
             <button
               type="submit"
               disabled={isGenerating}
-              className={`h-[56px] px-6 bg-blue-400 text-white rounded-xl hover:bg-blue-700 transition-colors flex items-center justify-center ${
+              className={`h-[56px] px-6 bg-blue-500 text-white rounded-xl hover:bg-blue-700 transition-colors flex items-center justify-center ${
                 isGenerating ? 'opacity-70 cursor-not-allowed' : ''
               }`}
             >
