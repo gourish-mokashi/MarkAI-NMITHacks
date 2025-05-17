@@ -12,9 +12,9 @@ const locomotiveScroll = new LocomotiveScroll();
 export function App() {
   return (
       <BrowserRouter>
-        <div className="flex flex-col items-center min-h-screen">
+        <div className="flex flex-col items-center">
           <Header />
-          <main className="w-full flex-grow">
+          <main className="w-full">
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/generator" element={<Generator />} />

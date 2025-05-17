@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { MenuIcon, XIcon, Fingerprint } from 'lucide-react';
 
 export function Footer() {
   const quickLinks = [
@@ -14,12 +15,16 @@ export function Footer() {
 
   return (
     <footer className="text-white w-full mt-8">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-8">
-        <div className="flex flex-col md:flex-row md:gap-0 gap-10 border-t-2 border-gray-500 pt-8 flex justify-between">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12">
+        <div className="flex flex-col md:flex-row md:gap-0 gap-10 border-t-2 border-gray-500 py-8 flex justify-between">
           <div>
-            <h3 className="text-3xl font-bold mb-4">
-              <span className="text-blue-600">Mark</span>AI
-            </h3>
+            <Link to="/" className="flex-shrink-0 flex gap-2 pb-3 items-center">
+              <Fingerprint className="h-10 w-10 text-blue-500" />
+                <div>
+                  <span className="text-blue-500 font-bold md:text-3xl text-2xl">Mark</span>
+                  <span className="text-white font-bold md:text-3xl text-2xl">AI</span>
+              </div>
+            </Link>
             <p className="text-gray-300">
               Advanced AI image generation and detection tool. <br />
               Built at NMIT HACKS - 2025.
@@ -39,13 +44,13 @@ export function Footer() {
             </div>
           </div>
         </div>
-        <div className="flex flex-col items-center text-lg border-t-2 border-gray-500 mt-2 pt-2 w-full">
+        <div className="flex flex-col items-center text-lg border-t-2 border-gray-500 pt-3 pb-4 w-full">
           <div className="mt-4">
             {bottomLinks.map((link) => (
               <div key={link.to}>
                 <Link
                   to={link.to}
-                  className="text-gray-300 hover:text-white text-xl"
+                  className="text-gray-300 hover:text-white text-md"
                 >
                   {link.name}
                 </Link>
