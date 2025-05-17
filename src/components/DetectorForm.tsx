@@ -34,7 +34,7 @@ export function DetectorForm() {
       setIsAnalyzing(false);
     }, 2000);
   };
-  return <div className="w-full max-w-3xl mx-auto">
+  return <div className="w-full max-w-3xl">
       <div className="mb-8">
         <label className="block text-gray-300 font-medium mb-2">
           Upload an image to analyze

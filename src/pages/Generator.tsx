@@ -5,9 +5,9 @@ export function Generator() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-10">
           <h1 className="text-5xl font-bold text-gray-900 mb-4 border-b-2 border-gray-500 pb-6">
-            <span className="text-blue-600">AI </span><span className="text-white">Image Generator</span>
+            <span className="text-white">AI </span><span className="text-blue-600">Image Generator</span>
           </h1>
-          <p className="text-lg text-gray-300 max-w-2xl">
+          <p className="text-lg text-gray-300">
             Create stunning AI-generated images by describing what you want to
             see. Our advanced AI will bring your ideas to life.
           </p>
@@ -16,7 +16,7 @@ export function Generator() {
           <GeneratorForm />
         </div>
         <div className="w-full mt-16 rounded-lg shadow-md">
-          <h3 className="w-full text-white text-5xl font-bold mb-4 border-b-2 border-gray-500 pb-6">Tips for Great Results</h3>
+          <h3 className="w-full text-white text-5xl font-bold mb-4 border-b-2 border-gray-500 pb-6">Tips for <span className='text-blue-600'>Great Results</span></h3>
           <ul className="w-full space-y-2 text-gray-300">
             <li className="w-full flex items-start">
               <span className="font-medium mr-2">•</span>
