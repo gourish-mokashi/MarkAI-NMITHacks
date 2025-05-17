@@ -1,5 +1,5 @@
 export function About() {
-  return <div className="w-full py-12 min-h-screen">
+  return <div className="w-full bg-[#101010] py-12 min-h-screen">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="rounded-lg shadow-md p-8">
           <h1 className="text-3xl font-bold text-white mb-6">
