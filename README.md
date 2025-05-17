@@ -48,7 +48,7 @@ MarkAI is a lightweight toolchain that lets any image generation model embed a r
 1. Start the development servers:  
    **Front End**: `npm run dev` (in the `frontend` directory)  
    **Back End**: `flask run` (in the `backend` directory)  
-2. Open [http://localhost:3000](http://localhost:3000) in your browser.
+2. Open [http://localhost:5173](http://localhost:3000) in your browser.
 
 ### Using Docker (Optional)
 - Install [Docker](https://www.docker.com/get-started)  

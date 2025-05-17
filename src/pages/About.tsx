@@ -5,7 +5,7 @@ export function About() {
   const team = [
     {
       name: "Jayasheel Vinay J",
-      role: "Front-end Developer",
+      role: "Front-End Developer",
       img: "/assets/images/jay.webp",
       github: "https://github.com/JayZ6969",
       linkedin: "https://www.linkedin.com/in/jayasheelvinayj",
@@ -13,7 +13,7 @@ export function About() {
     },
     {
       name: "Binit Gupta",
-      role: "Front-end Developer",
+      role: "Front-End Developer",
       img: "assets/images/binit.jpg",
       github: "https://github.com/binit2-1",
       linkedin: "https://www.linkedin.com/in/binitgupta",
@@ -21,7 +21,7 @@ export function About() {
     },
     {
       name: "Sanjana Patil",
-      role: "Back-end Developer",
+      role: "Back-End Developer",
       img: "assets/images/sanjana.jpg",
       github: "https://github.com/Sanjana0019",
       linkedin: "https://www.linkedin.com/in/sanjana-patil-436b7b332/",
@@ -29,7 +29,7 @@ export function About() {
     },
     {
       name: "Gourish Mokashi",
-      role: "Back-end Developer",
+      role: "Back-End Developer",
       img: "assets/images/gourish.jpeg",
       github: "https://github.com/gourish-mokashi",
       linkedin: "https://www.linkedin.com/in/gourish-mokashi",
@@ -89,13 +89,12 @@ export function About() {
             </h2>
           </div>
 
-          <div className="border-t-2 border-gray-500 mb-6" />
-
+          <div className="mb-6"/>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 mt-6">
             {team.map((person, i) => (
               <div
                 key={i}
-                className="flex flex-col rounded-xl border border-gray-700 p-4 bg-[#1a1a1a] text-center shadow-md hover:shadow-lg transition duration-300"
+                className="flex flex-col rounded-3xl border border-gray-700 p-4 bg-[#1a1a1a] text-center shadow-md hover:shadow-lg transition duration-300"
               >
                 <div className="h-full overflow-hidden rounded-xl">
                   <img
