@@ -1,8 +1,7 @@
 import React from 'react';
-import { BoxIcon } from 'lucide-react';
 
 interface FeatureCardProps {
-  icon: BoxIcon;
+  icon: React.ElementType;
   title: string;
   description: string;
 }

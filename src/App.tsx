@@ -5,13 +5,16 @@ import { Home } from './pages/Home';
 import { Generator } from './pages/Generator';
 import { Detector } from './pages/Detector';
 import { About } from './pages/About';
+import LocomotiveScroll from 'locomotive-scroll';
+
+const locomotiveScroll = new LocomotiveScroll();
 
 export function App() {
   return (
       <BrowserRouter>
         <div className="flex flex-col items-center min-h-screen">
           <Header />
-          <main className="flex-grow">
+          <main className="w-full flex-grow">
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/generator" element={<Generator />} />
