@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { MenuIcon, XIcon, Fingerprint } from 'lucide-react';
+import { Fingerprint } from 'lucide-react';
 
 export function Footer() {
   const quickLinks = [
@@ -31,7 +31,7 @@ export function Footer() {
             </p>
           </div>
           <div className='flex flex-col items-start space-y-2 mr-32'>
-            <h4 className="text-3xl font-semibold text-bold mb-4 border-b-2 border-gray-500 pb-2">Quick Links</h4>
+            <h4 className="text-3xl font-semibold text-bold mb-2">Quick Links</h4>
             <div className="flex flex-col gap-1 w-full">
               {quickLinks.map((link) => (
                 <Link to={link.to} className="flex items-center text-gray-300 hover:text-white">
