@@ -1,9 +1,8 @@
 import { Link } from 'react-router-dom';
-import { TwitterIcon, FacebookIcon, InstagramIcon, GithubIcon } from 'lucide-react';
 export function Footer() {
   return <footer className="text-white w-full">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="flex justify-between">
+      <div className=" max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="border-t border-gray-700 pt-8 flex justify-between">
           <div>
             <h3 className="text-xl font-bold mb-4"><span className='text-blue-600'>Mark</span>AI</h3>
             <p className="text-gray-300">
