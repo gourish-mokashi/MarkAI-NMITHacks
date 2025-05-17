@@ -11,6 +11,8 @@ export function About() {
             <span className="text-blue-600">Mark</span>
             <span className="text-white">AI</span>
           </h1>
+          {/* Horizontal line after About MarkAI */}
+          <div className="border-t-2 border-gray-500 mb-6"></div>
           <div className="text-gray-300 prose max-w-none">
             <p>
               MarkAI is a lightweight filter that integrates with AI image
@@ -22,6 +24,8 @@ export function About() {
             <h2 className="text-white text-xl font-semibold mt-8 mb-3">
               Tech-Stack
             </h2>
+            {/* Horizontal line after Tech-Stack */}
+            <div className="border-t-2 border-gray-500 mb-6"></div>
             <p className="text-gray-300">
               Frontend: React+Vite, TypeScript, Tailwind CSS
               <br />
@@ -42,7 +46,8 @@ export function About() {
               promoting responsible use of AI-generated content.
             </p>
             <h2 className="text-xl font-semibold mt-8 mb-3">Our Team</h2>
-
+            {/* Horizontal line after Our Team */}
+            <div className="border-t-2 border-gray-500 mb-6"></div>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-6">
               {[
                 {

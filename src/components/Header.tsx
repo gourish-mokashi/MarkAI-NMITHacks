@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { MenuIcon, XIcon } from 'lucide-react';
+import { MenuIcon, XIcon, Fingerprint } from 'lucide-react';
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -10,7 +10,8 @@ export function Header() {
         <div className="flex justify-between p-2 h-20">
           <div className="flex items-center">
             <Link to="/" className="flex-shrink-0 flex items-center">
-              <span className="text-blue-600 font-bold text-3xl">Mark</span>
+              <Fingerprint className="h-10 w-10 text-blue-400" />
+              <span className="text-blue-400 font-bold text-3xl">Mark</span>
               <span className="text-white font-bold text-3xl">AI</span>
             </Link>
           </div>
