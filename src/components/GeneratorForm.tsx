@@ -18,10 +18,10 @@ export function GeneratorForm() {
   return <div className="w-full max-w-3xl mx-auto">
       <form onSubmit={handleSubmit} className="mb-8">
         <div className="mb-4">
-          <label htmlFor="prompt" className="block text-gray-700 font-medium mb-2">
+          <label htmlFor="prompt" className="block text-gray-300 font-medium mb-2">
             Describe the image you want to generate
           </label>
-          <textarea id="prompt" value={prompt} onChange={e => setPrompt(e.target.value)} className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" rows={4} placeholder="E.g., A serene landscape with mountains and a lake at sunset" required />
+          <textarea id="prompt" value={prompt} onChange={e => setPrompt(e.target.value)} className="bg-gray-300 w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" rows={4} placeholder="E.g., A serene landscape with mountains and a lake at sunset" required />
         </div>
         <button type="submit" disabled={isGenerating} className={`px-6 py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors flex items-center justify-center ${isGenerating ? 'opacity-70 cursor-not-allowed' : ''}`}>
           {isGenerating ? <>
