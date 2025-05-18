@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useCallback } from 'react';
 import { UploadIcon, SearchIcon } from 'lucide-react';
 
 export function DetectorForm() {
@@ -15,11 +15,16 @@ export function DetectorForm() {
     metadata?: Record<string, any>;
   } | null>(null);
   const [error, setError] = useState<string | null>(null);
+  const [isDragging, setIsDragging] = useState(false);
 
   const handleImageUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
     const uploadedFile = e.target.files?.[0];
     if (!uploadedFile) return;
 
+    processFile(uploadedFile);
+  };
+
+  const processFile = (uploadedFile: File) => {
     const reader = new FileReader();
     reader.onload = event => {
       if (typeof event.target?.result === 'string') {
@@ -31,6 +36,39 @@ export function DetectorForm() {
     };
     reader.readAsDataURL(uploadedFile);
   };
+
+  const handleDragEnter = useCallback((e: React.DragEvent<HTMLDivElement>) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setIsDragging(true);
+  }, []);
+
+  const handleDragLeave = useCallback((e: React.DragEvent<HTMLDivElement>) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setIsDragging(false);
+  }, []);
+
+  const handleDragOver = useCallback((e: React.DragEvent<HTMLDivElement>) => {
+    e.preventDefault();
+    e.stopPropagation();
+  }, []);
+
+  const handleDrop = useCallback((e: React.DragEvent<HTMLDivElement>) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setIsDragging(false);
+    
+    const files = e.dataTransfer.files;
+    if (files && files.length > 0) {
+      const file = files[0];
+      if (file.type.startsWith('image/')) {
+        processFile(file);
+      } else {
+        setError('Please upload an image file');
+      }
+    }
+  }, []);
 
   const handleAnalyze = async () => {
     if (!file) return;
@@ -79,7 +117,13 @@ export function DetectorForm() {
         <label className="block text-gray-300 font-medium mb-2">
           Upload an image to analyze
         </label>
-        <div className={`border-2 border-dashed rounded-lg p-8 text-center ${image ? 'border-green-400' : 'border-gray-300'}`}>
+        <div 
+          className={`border-2 border-dashed rounded-lg p-8 text-center ${isDragging ? 'border-blue-500 bg-blue-50 bg-opacity-10' : ''} ${image ? 'border-green-400' : 'border-gray-300'}`}
+          onDragEnter={handleDragEnter}
+          onDragOver={handleDragOver}
+          onDragLeave={handleDragLeave}
+          onDrop={handleDrop}
+        >
           {image ? (
             <div className="mb-4">
               <img src={image} alt="Uploaded" className="max-h-64 mx-auto rounded" />
