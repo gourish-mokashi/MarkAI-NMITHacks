@@ -25,19 +25,15 @@ export function Detector() {
           <ul className="space-y-2 text-gray-300">
             <li className="flex items-start">
               <span className="font-medium mr-2">•</span>
-              Pixel-level inconsistencies and artifacts
+              Uses steganography decoder to detect pixel level embedded watermarks
             </li>
             <li className="flex items-start">
               <span className="font-medium mr-2">•</span>
-              Unnatural textures and patterns
+              Checks Metadata for more information
             </li>
             <li className="flex items-start">
               <span className="font-medium mr-2">•</span>
-              Unusual lighting and shadow characteristics
-            </li>
-            <li className="flex items-start">
-              <span className="font-medium mr-2">•</span>
-              Embedded watermarks and signatures
+              256-bit Hash Key verification
             </li>
           </ul>
         </div>

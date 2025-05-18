@@ -33,34 +33,26 @@ MarkAI is a lightweight toolchain that lets any image generation model embed a r
    git clone https://github.com/your-org/MarkAI-NMITHacks.git
    cd MarkAI-NMITHacks
    ```
-2. Install front-end dependencies  
+2. Install all dependencies (front-end and back-end)
    ```bash
-   cd frontend
-   npm install
+   npm run install-all
    ```
-3. Install back-end dependencies  
-   ```bash
-   cd ../backend
-   pip install -r requirements.txt
-   ```
+   This will:
+   - Install root dependencies
+   - Install frontend dependencies
+   - Install backend Python requirements
 
 ### Running the App
-1. Start the development servers:  
-   **Front End**: `npm run dev` (in the `frontend` directory)  
-   **Back End**: `flask run` (in the `backend` directory)  
-2. Open [http://localhost:5173](http://localhost:3000) in your browser.
+1. Start both frontend and backend servers with a single command:
+   ```bash
+   npm run dev
+   ```
+   Or run them separately:
+   - Frontend only: `npm run frontend`
+   - Backend only: `npm run backend`
 
-### Using Docker (Optional)
-- Install [Docker](https://www.docker.com/get-started)  
-- Build the image:  
-  ```bash
-  docker build -t markai-app .
-  ```
-- Run the container:  
-  ```bash
-  docker run -p 3000:3000 markai-app
-  ```
-- Access the app at [http://localhost:3000](http://localhost:3000).
+2. Open [http://localhost:5173](http://localhost:5173) in your browser.
+
 
 ## Contributing
 We welcome contributions! Please read our [contributing guidelines](CONTRIBUTING.md) before submitting a pull request.
@@ -71,3 +63,5 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ---
 
 Made with ❤️ by the MarkAI team
+
+
