@@ -12,11 +12,10 @@ MarkAI is a lightweight toolchain that lets any image generation model embed a r
 ![Image Generation Interface](./screenshots/2.png)
 
 ## Features
-- Invisible, spread-spectrum watermark in the frequency domain  
+- Invisible, spread-spectrum watermark in the frequency domain using Steganography 
 - No visible artifacts or quality loss  
 - Fast, client- or server-side embedding & detection  
 - React+Vite+Tailwind front end for prompt→generate→download  
-- Detector API for "AI-Generated" / "Original" classification  
 
 ![Watermark Detection](./screenshots/3.png)
 
@@ -28,6 +27,8 @@ MarkAI is a lightweight toolchain that lets any image generation model embed a r
 
 ![Architecture Overview](./screenshots/4.png)
 
+## Future Improvements
+- **API Development**: Detector API for "AI-Generated" / "Original" classification  
 ## Getting Started
 
 ### Prerequisites
