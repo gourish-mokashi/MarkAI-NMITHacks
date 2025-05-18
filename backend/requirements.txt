@@ -1,0 +1,17 @@
+flask==3.0.0
+pillow==10.1.0
+numpy==1.26.2
+python-dotenv==1.0.0
+requests==2.31.0
+flask-cors==4.0.0
+huggingface-hub==0.19.4
+diffusers==0.24.0
+accelerate==0.25.0
+transformers==4.36.2
+--find-links https://download.pytorch.org/whl/cu118
+torch
+torchvision
+torchaudio
+stegano==1.0.1
+apscheduler==3.10.4
+uuid==1.30

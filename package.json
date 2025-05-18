@@ -1,0 +1,15 @@
+{
+  "name": "markai-nmithacks",
+  "version": "1.0.0",
+  "scripts": {
+    "install-frontend": "cd frontend && npm install",
+    "install-backend": "cd backend && pip install -r requirements.txt",
+    "install-all": "npm install && npm run install-frontend && npm run install-backend",
+    "frontend": "cd frontend && npm run dev",
+    "backend": "cd backend && python app.py",
+    "dev": "concurrently --kill-others-on-fail \"npm run frontend\" \"npm run backend\""
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

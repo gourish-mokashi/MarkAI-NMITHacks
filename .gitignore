@@ -1,0 +1,85 @@
+# Python Backend
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+dist/
+build/
+*.egg-info/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+.installed.cfg
+*.egg
+
+# Virtual environment
+venv/
+env/
+ENV/
+.venv
+.Python
+
+# Node.js Frontend
+node_modules/
+.npm/
+pids
+*.pid
+*.seed
+*.pid.lock
+lib-cov/
+
+# Testing and Coverage
+coverage/
+.coverage
+htmlcov/
+.tox/
+.pytest_cache/
+nosetests.xml
+coverage.xml
+*.cover
+.eslintcache
+
+# Logs and debugging
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.node_repl_history
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# IDE / Editor
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Local development
+instance/
+.webassets-cache
+generated_images/
+temp_files/
+
+# Build output
+/dist
+/build
+.next/
+out/
+
+# Concurrent process files
+.concurrent.pid
+.concurrent.log
