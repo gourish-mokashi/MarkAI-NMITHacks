@@ -25,6 +25,7 @@ ENV/
 
 # Logs
 *.log
+.image_ledger.json
 
 # Local development settings
 instance/
